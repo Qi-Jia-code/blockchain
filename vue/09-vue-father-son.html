@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app3">
+   <stu></stu>
+  </div>
+  <script src="vue.js"></script>
+  <script>
+  
+    //root组件
+   const app3 = new Vue({
+      el:'#app3',
+      data:{
+       message:'hello'    
+      },
+      conponents: {
+        'stu':{
+      template:`
+      <div>
+        <h2>标题1</h2>
+        <p>内容1</p>
+        <mystu></mystu>
+      </div>
+      `,
+      conponents: {
+        'mystu':{
+                template:`
+                <div>
+                  <h2>标题1</h2>
+                  <p>内容1</p>
+                </div>
+                `
+              }
+   }
+    }
+      }
+    })
+
+  </script>
+</body>
+</html>
